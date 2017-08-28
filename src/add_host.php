@@ -7,12 +7,11 @@
  */
 
 
-
 $filename = '/etc/hosts';
 
 $fh = fopen($filename, "a");
-if(!domainExist($domain)){
-    fwrite($fh, "\n127.0.0.1 ".$domain.".dev");
+if (!domainExist($domain)) {
+    fwrite($fh, "\n127.0.0.1 " . $domain . ".dev");
     fclose($fh);
     var_dump('host条目添加完成');
 }

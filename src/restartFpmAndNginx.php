@@ -6,5 +6,5 @@
  * Time: 10:54
  */
 
-exec('cd '.$laradockFolder.' && docker-compose restart php-fpm');
-exec('cd '.$laradockFolder.' && docker-compose restart nginx');
+exec('cd ' . $laradockFolder . ' && docker-compose restart php-fpm');
+exec('cd ' . $laradockFolder . ' && docker-compose restart nginx');
