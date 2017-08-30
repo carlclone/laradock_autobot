@@ -7,26 +7,34 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class BuildCommand extends Command
 {
+    /**
+     * 命令相关配置
+     */
     protected function configure()
     {
         $this->setName('build')
             ->setDescription('搭建一个新项目.')
             ->addArgument('domain', InputArgument::REQUIRED, '输入项目名字')
             ->addArgument('folder', InputArgument::REQUIRED, '输入项目文件夹');
-//->addOption(); //php demo speak --voice
     }
 
+    /**
+     * 命令执行内容
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-//        exec('say '.$input->getArgument('message'));
+        //脚本参数
         $laradockFolder = '/Volumes/VirutalMachine/development/laradock/';
         $nginxFolder = $laradockFolder . 'nginx/sites/';
         $domain = $input->getArgument('domain');
         $folder = $input->getArgument('folder');
+
+        //脚本引入
         require('add_host.php');
         require('add_nginx_conf.php');
         require('add_database.php');
         require('restartFpmAndNginx.php');
-        $output->writeln('<info>All done.</info>');
+
+        $output->writeln('<info>全部完成.</info>');
     }
 }
