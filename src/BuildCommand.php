@@ -30,9 +30,9 @@ class BuildCommand extends Command
         $folder = $input->getArgument('folder');
 
         //脚本引入
-        require('add_host.php');
-        require('add_nginx_conf.php');
-        require('add_database.php');
+        require('addHost.php');
+        require('addNginxConf.php');
+        require('addDatabase.php');
         require('restartFpmAndNginx.php');
 
         $output->writeln('<info>全部完成.</info>');
