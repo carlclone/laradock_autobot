@@ -14,5 +14,5 @@ if (!domainExist($domain)) {
 
 function domainExist($domain)
 {
-    return strpos(file_get_contents('/etc/hosts'), $domain);
+    return strpos(file_get_contents('/etc/hosts'), $domain.'.dev');
 }
