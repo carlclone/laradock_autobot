@@ -1,3 +1,4 @@
 /vendor
 new.conf
 /.idea
+composer.lock

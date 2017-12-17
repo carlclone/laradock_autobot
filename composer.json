@@ -1,11 +1,21 @@
 {
+    "name": "lin/laradock_autobot",
+    "description": "haha,first pack",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "cc lin",
+            "email": "906561974@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
     "require": {
-        "symfony/finder": "^3.3",
-        "symfony/console": "^3.3"
+        "php":">=7.0.0"
     },
-    "autoload":{
+    "autoload": {
         "psr-4":{
-            "":"src/"
+            "Ford\\":"src/Ford"
         }
     }
 }
